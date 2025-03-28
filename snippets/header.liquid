@@ -1,0 +1,23 @@
+<header class="header-nav">
+  <div>
+    <a href="/" class="logo">
+      <img width="60" height="50" loading="lazy" src="{{ "logo.png" | asset_url }}">
+      <p class="logo-text">ShopScript.</p>
+    </a>
+  </div>
+  <div>
+    <ul class="middle-nav-bar">
+      {% for link in linklists['main-menu'].links -%}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="right-nav-items">
+    <form action="/search">
+      <input class="search-nav" placeholder="search" type="search">
+    </form>
+    <a href="/">
+      <img width="40" height="40" loading="lazy" src="{{ "shopping-cart.png" | asset_url }}">
+    </a>
+  </div>
+</header>

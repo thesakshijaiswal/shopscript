@@ -1,0 +1,39 @@
+{% if section.settings['show-announcement'] %}
+  <section>
+    <div class="announcement-bar">20% Discount on all items this spring</div>
+  </section>
+{% endif %}
+
+<style>
+  .announcement-bar{
+  background: {{ section.settings.background }};
+  color: {{ section.settings.text-color }}
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-announcement",
+      "label": "Show Announcement",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": []
+}
+{% endschema %}

@@ -1,0 +1,72 @@
+<section>
+  <div class="banner-wrapper">
+    <div class="slide-text" id="text-1">Members: Free Shipping!</div>
+    <div class="slide-text" id="text-2">Save Upto 25% on Products</div>
+    <div class="slide-text" id="text-3">Get Your Gear Faster ...</div>
+  </div>
+</section>
+
+<style>
+  .banner-wrapper {
+  background: {{ section.settings.background }};
+  color: {{ section.settings.text-color }};
+  }
+  .slide-text{
+  position: absolute;
+  left: -150%;
+  transform: translate(0, -50%);
+  color: #ffffff;
+  transition: left 0.5s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const texts = document.querySelectorAll('.slide-text');
+    let currentIndex = 0;
+
+    function slideToRight(element) {
+      element.style.left = '44%';
+    }
+
+    function resetPosition(element) {
+      element.style.left = '-100%';
+    }
+
+    function slideText() {
+      resetPosition(texts[currentIndex]);
+      currentIndex = (currentIndex + 1) % texts.length;
+      slideToRight(texts[currentIndex]);
+    }
+
+    slideToRight(texts[currentIndex]);
+    setInterval(slideText, 3000);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "banner"
+    }
+  ]
+}
+{% endschema %}
