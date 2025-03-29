@@ -69,6 +69,32 @@
   font-weight: 600;
 }
 
+/*More-info section*/
+
+.more-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px;
+  gap: 25px;
+}
+
+.more-info-wrapper h1 {
+  font-size: 3.4rem;
+}
+
+.more-info-button {
+  padding: 10px 30px;
+  background-color: #db0b50;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0px 20px;
+}
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .hero {
     height: 35%;

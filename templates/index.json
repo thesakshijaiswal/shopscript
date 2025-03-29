@@ -8,11 +8,15 @@
            "type": "hero",
            "settings":{} 
         },
+        "more-info": {
+           "type": "more-info",
+           "settings":{} 
+        },
         
     },
     "order":[
         "banner",
         "hero",
-        
+        "more-info" 
     ]
 }
