@@ -1,14 +1,39 @@
 <section>
-  <div class="hero">
-    <div class="offer-hero">
-      <p class="hero-1">LIMITED TIME ONLY</p>
-      <h3>UPTO 25% OFF</h3>
-      <p class="hero-2">All Jackets & T-Shirts</p>
-      <p class="hero-3">LET'S <span>STAYTRENDY</span></p>
-      <button>SHOP NOW</button>
+  {% if section.settings.image != blank %}
+    <div class="hero-user">
+      <div class="offer-hero">
+        <p class="hero-1">LIMITED TIME ONLY</p>
+        <h3>UPTO 25% OFF</h3>
+        <p class="hero-2">All Jackets & T-Shirts</p>
+        <p class="hero-3">LET'S <span>STAYTRENDY</span></p>
+        <button>SHOP NOW</button>
+      </div>
     </div>
-  </div>
+  {% else %}
+    <div class="hero">
+      <div class="offer-hero">
+        <p class="hero-1">LIMITED TIME ONLY</p>
+        <h3>UPTO 25% OFF</h3>
+        <p class="hero-2">All Jackets & T-Shirts</p>
+        <p class="hero-3">LET'S <span>STAYTRENDY</span></p>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+  {% endif %}
 </section>
+
+<style>
+  .hero-user {
+    height: 100%;
+    background-image: url('{{ section.settings.image | image_url }}');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    background-position: center top;
+  }
+</style>
 
 {% schema %}
 {
