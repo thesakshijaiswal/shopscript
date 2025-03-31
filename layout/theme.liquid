@@ -3,6 +3,7 @@
     {{ content_for_header }}
     {{ 'main.css' | asset_url | stylesheet_tag }}
     {{ 'header.css' | asset_url | stylesheet_tag }}
+    {{ 'footer.css' | asset_url | stylesheet_tag }}
     {{ 'product-container.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
@@ -12,5 +13,7 @@
     <main id="main" role="main">
       {{ content_for_layout }}
     </main>
+
+    {% section 'footer' %}
   </body>
 </html>
