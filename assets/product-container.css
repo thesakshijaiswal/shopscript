@@ -1,13 +1,12 @@
-.home_collection {
+.product-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #c4b8a9;
 }
 
-.home_collection h2 {
-  font-size: 2rem;
+.product-container h2 {
+  font-size: 2.2rem;
   padding: 50px;
 }
 
@@ -25,7 +24,7 @@
 }
 
 .product-card {
-  background-color: #eee9e2;
+  background-color: #fefdf8;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -56,9 +55,7 @@
   color: #000;
   margin: 8px 16px;
 }
-.product-description {
-  color: #d11717;
-}
+
 @media (max-width: 768px) {
   .product-card {
     max-width: 45%;

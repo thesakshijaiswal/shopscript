@@ -1,0 +1,51 @@
+<section class="all-products">
+  <div class="product-container">
+    <h2>Featured Collections</h2>
+    <div class="product-list">
+      {% for product in collections.frontpage.products %}
+        <div class="product-card">
+          <a href="{{ product.url }}" class="product-link">
+            <img
+              src="{{ product.featured_image | image_url }}"
+              class="product-img"
+              alt="{{ product.title }}"
+              width="300"
+              height="300"
+              loading="lazy"
+            >
+            <h3 class="product-title">{{ product.title }}</h3>
+            <p class="product-price">{{ product.price | money }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .all-products{
+  background: {{ section.settings.background }};
+  color: {{ section.settings.text_color }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "All-products",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#c4b8a9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    }
+  ],
+  "presets": []
+}
+{% endschema %}

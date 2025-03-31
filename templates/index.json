@@ -12,11 +12,16 @@
            "type": "more-info",
            "settings":{} 
         },
+        "all-products":{
+            "type": "all-products",
+           "settings":{} 
+        }
         
     },
     "order":[
         "banner",
         "hero",
-        "more-info" 
+        "more-info",
+        "all-products"
     ]
 }
