@@ -3,6 +3,7 @@ footer.footer-main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: auto;
 }
 
 .footer-sec-1 {
@@ -49,7 +50,7 @@ footer.footer-main {
   font-size: 0.7rem;
   color: #c2c0c0;
 }
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .footer-sec-1 {
     flex-direction: column;

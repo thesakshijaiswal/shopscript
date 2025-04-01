@@ -1,0 +1,59 @@
+{% paginate collections.catalog.products by 8 %}
+  <section class="collection-sec">
+    <div class="collection-wrapper">
+      <h2 class="collection-heading">Featured Collections</h2>
+      <div class="collection-grid">
+        {% for product in collections.catalog.products %}
+          <div class="product-card">
+            <a href="{{ product.url }}" class="product-link">
+              <div class="image-wrapper">
+                <img
+                  src="{{ product.featured_image | image_url }}"
+                  class="product-img"
+                  alt="{{ product.title }}"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                >
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">{{ product.title }}</h3>
+                <p class="product-price">{{ product.price | money }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="pagination-wrapper">
+        {{ paginate | default_pagination }}
+      </div>
+    </div>
+  </section>
+{% endpaginate %}
+
+<style>
+  .collection-sec {
+    background: {{ section.settings.background }};
+    padding: 60px 20px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fefdf8"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Collection"
+    }
+  ]
+}
+{% endschema %}

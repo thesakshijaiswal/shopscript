@@ -60,14 +60,12 @@
   margin: 8px 16px;
 }
 
-/* Medium screens (max-width: 1024px) - Show 3 cards per row */
 @media (max-width: 1024px) {
   .product-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Small screens (max-width: 768px) - Show 1 card per row */
 @media (max-width: 768px) {
   .product-list {
     grid-template-columns: repeat(1, 1fr);
