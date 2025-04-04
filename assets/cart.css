@@ -1,5 +1,6 @@
 .cart-sec {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   padding: 60px 20px;
@@ -39,7 +40,9 @@ button a {
   color: white;
 }
 
-button {
+.checkout-btn,
+.explore-btn,
+.remove-btn {
   background: #151515;
   color: white;
   padding: 12px 22px;

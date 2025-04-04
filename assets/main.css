@@ -15,8 +15,6 @@ body {
 
 main#main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   background: #fefdf8;
 }
 
@@ -85,7 +83,7 @@ main#main {
   margin-left: 5px;
 }
 
-.offer-hero button {
+.offer-hero .shop-now {
   background-color: transparent;
   border: 2px solid black;
   padding: 10px 50px;

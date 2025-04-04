@@ -8,7 +8,7 @@
           <p class="empty-cart-tagline">
             Looks like you have not added anything to your cart. Go ahead & explore top categories.
           </p>
-          <button><a href="/collections/catalog">Explore our Collection</a></button>
+          <button class="explore-btn"><a href="/collections/catalog">Explore our Collection</a></button>
         </div>
       {% else %}
         <div class="cart-wrapper">
@@ -18,14 +18,14 @@
                 <img src="{{ item.image|image_url }}" width="200" height="200">
                 <h2>{{ item.title }}</h2>
                 <p>{{ item.price | money }}</p>
-                <button><a href="{{ item.url_to_remove }}">Remove</a></button>
+                <button class="remove-btn"><a href="{{ item.url_to_remove }}">Remove</a></button>
               </div>
             {% endfor %}
           </div>
           <div class="subtotal">
             <p><span>Total Quantity:</span> {{ cart.item_count }}</p>
             <p><span>Total Price:</span> {{ cart.total_price }}</p>
-            <button type="submit" name="checkout">Checkout</button>
+            <button type="submit" name="checkout" class="checkout-btn">Checkout</button>
           </div>
         </div>
       {% endif %}
