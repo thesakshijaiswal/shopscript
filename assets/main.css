@@ -28,57 +28,96 @@ main#main {
 
 /*Hero Section*/
 
+.hero-user,
 .hero {
   height: 100vh;
-  background-image: url("../assets/hero-banner.png");
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   background-size: cover;
   background-position: center top;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 5%;
+  position: relative;
+}
+
+.hero {
+  background-image: url("../assets/hero-banner.png");
 }
 
 .offer-hero {
-  padding-left: 52px;
-  text-align: center;
+  max-width: 500px;
+  z-index: 1;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .offer-hero .hero-1 {
-  font-size: 0.8rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 500;
-  line-height: 2px;
-}
-.offer-hero .hero-2 {
-  font-size: 1rem;
-  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .offer-hero h3 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.offer-hero .hero-2 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .offer-hero .hero-3 {
-  padding-top: 2rem;
-  font-size: 0.7rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .offer-hero .hero-3 span {
-  font-size: 1rem;
-  font-weight: 600;
   background-color: #db0b50;
   color: #fff;
-  padding: 1px 7px;
+  padding: 3px 8px;
   margin-left: 5px;
+  border-radius: 4px;
 }
 
-.offer-hero .shop-now {
+.offer-hero button {
   background-color: transparent;
   border: 2px solid black;
-  padding: 10px 50px;
-  margin-top: 8px;
+  padding: 10px 40px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.offer-hero button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Small screen handling */
+@media (max-width: 768px) {
+  .hero-user,
+  .hero {
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: top center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .offer-hero {
+    max-width: 100%;
+  }
+
+  .offer-hero button {
+    width: 100%;
+  }
 }
 
 /*More-info section*/
@@ -130,6 +169,10 @@ main#main {
     gap: 1rem;
   }
 
+  .hero {
+    background-image: url("../assets/hero-banner-sm.png");
+  }
+
   .more-info-wrapper h1 {
     font-size: 2.2rem;
   }
@@ -140,7 +183,7 @@ main#main {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
   .hero {
     height: 35vh;
   }
