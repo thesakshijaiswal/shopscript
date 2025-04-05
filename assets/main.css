@@ -118,6 +118,38 @@ main#main {
   border-radius: 0px 20px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .more-info-wrapper {
+    padding: 8vw;
+    gap: 1.5rem;
+  }
+
+  .more-info-wrapper h1 {
+    font-size: 3rem;
+  }
+
+  .more-info-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .more-info-wrapper {
+    gap: 1rem;
+  }
+
+  .more-info-wrapper h1 {
+    font-size: 2.2rem;
+  }
+
+  .more-info-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .hero {
     height: 35vh;
