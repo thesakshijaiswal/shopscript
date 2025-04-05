@@ -26,16 +26,6 @@ main#main {
   font-size: 0.9rem;
 }
 
-/*Banner Section*/
-
-.banner-wrapper {
-  padding: 30px 0px;
-  font-size: 0.9rem;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-
 /*Hero Section*/
 
 .hero {
