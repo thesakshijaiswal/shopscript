@@ -1,6 +1,16 @@
 <nav>
   {% render 'header' %}
 </nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const header = document.querySelector('.header-nav');
+
+    hamburger.addEventListener('click', () => {
+      header.classList.toggle('active');
+    });
+  });
+</script>
 
 {% schema %}
 {

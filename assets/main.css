@@ -28,8 +28,7 @@ main#main {
 
 /*Hero Section*/
 
-.hero-user,
-.hero {
+.hero, .hero-user {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,9 +38,6 @@ main#main {
   justify-content: flex-start;
   padding: 2rem 5%;
   position: relative;
-}
-
-.hero {
   background-image: url("../assets/hero-banner.png");
 }
 
@@ -100,26 +96,6 @@ main#main {
   color: white;
 }
 
-/* Small screen handling */
-@media (max-width: 768px) {
-  .hero-user,
-  .hero {
-    flex-direction: column;
-    justify-content: flex-end;
-    background-position: top center;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .offer-hero {
-    max-width: 100%;
-  }
-
-  .offer-hero button {
-    width: 100%;
-  }
-}
-
 /*More-info section*/
 
 .more-info-wrapper {
@@ -149,6 +125,22 @@ main#main {
 }
 
 @media (max-width: 768px) {
+  .hero, .hero-user {
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: top center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .offer-hero {
+    max-width: 100%;
+  }
+
+  .offer-hero button {
+    width: 100%;
+  }
+
   .more-info-wrapper {
     padding: 8vw;
     gap: 1.5rem;
