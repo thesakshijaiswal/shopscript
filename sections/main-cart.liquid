@@ -4,6 +4,7 @@
     <div class="cart-container">
       {% if cart.empty? %}
         <div class="empty-cart">
+          <img width="140" height="140" loading="lazy" src="{{ 'empty-cart.svg' | asset_url }}">
           <h3 class="empty-cart-msg">Your cart is empty</h3>
           <p class="empty-cart-tagline">
             Looks like you have not added anything to your cart. Go ahead & explore top categories.
