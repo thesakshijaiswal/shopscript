@@ -22,8 +22,11 @@
     <form action="/search">
       <input class="search-nav" placeholder="search" type="search">
     </form>
-    <a href="/cart">
-      <img width="40" height="40" loading="lazy" src="{{ 'shopping-cart.png' | asset_url }}">
-    </a>
+    <div class="cart-icon">
+      <a href="/cart">
+        <img width="40" height="40" loading="lazy" src="{{ 'shopping-cart.png' | asset_url }}">
+      </a>
+      <span>{{ cart.item_count }}</span>
+    </div>
   </div>
 </header>

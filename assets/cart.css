@@ -59,7 +59,6 @@ button:hover {
 
 .cart-wrapper {
   display: flex;
-  align-items: center;
   gap: 30px;
 }
 .cart-items {
@@ -68,7 +67,7 @@ button:hover {
   gap: 20px;
 }
 
-.cart-items div {
+.cart-items .cart-item-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,6 +85,20 @@ button:hover {
   object-fit: cover;
 }
 
+.cart-quantity-img {
+  position: relative;
+}
+.cart-quantity-img span {
+  background-color: #db0b50da;
+  color: #fff;
+  padding: 4px 11px;
+  border-radius: 100%;
+  font-weight: 600;
+  position: absolute;
+  left: 78px;
+  top: -4px;
+}
+
 .cart-items h2 {
   font-size: 1.4rem;
   flex-grow: 1;
@@ -98,6 +111,7 @@ button:hover {
   font-size: 1.2rem;
   font-weight: bold;
   color: #645e56;
+  white-space: nowrap;
 }
 
 .cart-summary {
@@ -134,36 +148,71 @@ button:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.subtotal p span {
-  font-weight: 500;
+.subtotal p {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtotal p span:first-child {
+  font-weight: 600;
 }
 .subtotal button {
   width: 80%;
   margin: 10px;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
+
+@media (max-width: 870px) {
   .cart-sec {
     padding: 40px 15px;
   }
+
   .cart-heading {
     font-size: 1.8rem;
   }
+
+  .cart-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cart-items {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .cart-items img {
     width: 70px;
     height: 70px;
   }
+
   .cart-items h2 {
     font-size: 1.1rem;
   }
+
   .cart-items p {
     font-size: 0.9rem;
   }
+
   .cart-summary {
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
   }
+
   .subtotal {
-    width: 90%;
+    width: 80%;
+    max-width: 100%;
+  }
+  .cart-quantity-img span {
+    padding: 4px 9px;
+    border-radius: 100%;
+    font-weight: 600;
+    position: absolute;
+    left: 48px;
+    top: -3px;
+    font-size: 0.8rem;
   }
 }
 
@@ -171,21 +220,48 @@ button:hover {
   .cart-sec {
     padding: 30px 10px;
   }
+
   .cart-heading {
     font-size: 1.5rem;
   }
+
+  .cart-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cart-items {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .cart-items img {
     width: 60px;
     height: 60px;
   }
+
   .cart-items h2 {
     font-size: 1rem;
+    margin: auto;
   }
+
   .cart-items p {
     font-size: 0.85rem;
   }
+
+  .cart-summary {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
   button {
     font-size: 0.9rem;
     padding: 10px 18px;
+  }
+  .remove-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }

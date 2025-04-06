@@ -28,7 +28,8 @@ main#main {
 
 /*Hero Section*/
 
-.hero, .hero-user {
+.hero,
+.hero-user {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,6 +49,7 @@ main#main {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 1rem;
   border-radius: 8px;
+  text-align: center;
 }
 
 .offer-hero .hero-1 {
@@ -63,7 +65,7 @@ main#main {
 }
 
 .offer-hero .hero-2 {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -125,7 +127,8 @@ main#main {
 }
 
 @media (max-width: 768px) {
-  .hero, .hero-user {
+  .hero,
+  .hero-user {
     flex-direction: column;
     justify-content: flex-end;
     background-position: top center;
