@@ -1,0 +1,58 @@
+<section class="search-sec">
+  <div class="search-wrapper">
+    {% if search.results_count > 0 %}
+      <div class="search-grid">
+        {% for item in search.results %}
+          <div class="search-result-container">
+            <div class="product-card">
+              <a href="{{ item.url }}" class="product-link">
+                <div class="image-wrapper">
+                  <img
+                    src="{{ item.featured_image | image_url }}"
+                    class="product-img"
+                    alt="{{ item.title }}"
+                    width="300"
+                    height="300"
+                    loading="lazy"
+                  >
+                  <div class="product-info">
+                    <h3 class="product-title">{{ item.title }}</h3>
+                    <p class="product-price">{{ item.price | money }}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-result-wrapper">
+        <img height="300" width="300" src="{{ "search.svg" | asset_url }}">
+        <p>No results found.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .search-sec{
+    background: {{ section.settings.background }};
+    padding: 60px 20px;
+    height: 100%;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Search",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fefdf8"
+    }
+  ],
+  "presets": []
+}
+{% endschema %}

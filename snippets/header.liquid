@@ -19,8 +19,8 @@
   </ul>
 
   <div class="right-nav-items">
-    <form action="/search">
-      <input class="search-nav" placeholder="search" type="search">
+    <form action="/search" method="get">
+      <input class="search-nav" type="text" name="q" value="{{ search.terms }}" placeholder="Search">
     </form>
     <div class="cart-icon">
       <a href="/cart">

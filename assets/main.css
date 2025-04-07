@@ -126,6 +126,39 @@ main#main {
   cursor: pointer;
 }
 
+/*Search section*/
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.search-result-container {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+  height: 100%;
+}
+
+.no-result-wrapper {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .hero,
   .hero-user {
