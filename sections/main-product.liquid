@@ -30,6 +30,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  //Debounce Add to cart btn click
+  document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButton = document.querySelector('.addToCart-btn');
+    let debounceTimeout;
+
+    if (addToCartButton) {
+      addToCartButton.addEventListener('click', function (e) {
+        if (debounceTimeout) {
+          e.preventDefault();
+          return;
+        }
+        debounceTimeout = setTimeout(() => {
+          debounceTimeout = null;
+        }, 3000);
+      });
+    }
+  });
+</script>
+
 <style>
   .product-details-sec{
     background: {{ section.settings.background }};
