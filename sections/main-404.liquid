@@ -1,0 +1,21 @@
+<section>
+  <div class="not-found-wrapper">
+    <img height="400" width="400" src="{{ "404.svg" | asset_url }}">
+    <p>Page Not Found</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "404",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fefdf8"
+    }
+  ],
+  "presets": []
+}
+{% endschema %}
