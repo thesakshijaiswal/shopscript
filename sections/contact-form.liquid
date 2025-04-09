@@ -1,0 +1,53 @@
+<section class="contact-form-sec">
+  <div class="contact-form">
+    <h3 class="contact-heading">Contact Us</h3>
+    <div class="contact-form-wrapper">
+      {% form 'contact' %}
+        {{ form.errors | default_errors }}
+
+        <div class="first-name fields">
+          <label for="first-name">First name</label>
+          <input type="text" name="contact[first_name]" id="first-name">
+        </div>
+
+        <div class="last-name fields">
+          <label for="last-name">Last name</label>
+          <input type="text" name="contact[last_name]" id="last-name">
+        </div>
+
+        <div class="email fields">
+          <label for="email">Email</label>
+          <input type="email" name="contact[email]" id="email">
+        </div>
+
+        <div class="message fields">
+          <label for="message">Message</label>
+          <textarea name="contact[body]" id="message"></textarea>
+        </div>
+
+        <div class="send-msg">
+          <input type="submit" value="Send">
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "contact-form",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fefdf8"
+    }
+  ],
+  "presets": [
+    {
+      "name": "contact-form"
+    }
+  ]
+}
+{% endschema %}

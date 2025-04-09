@@ -1,0 +1,14 @@
+{
+    "sections": {
+      "contact-form": {
+        "type": "contact-form",
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+    },
+    "order": [
+      "contact-form"
+    ]
+  }

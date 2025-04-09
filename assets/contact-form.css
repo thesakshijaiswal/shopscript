@@ -1,0 +1,105 @@
+.contact-form-sec {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-form-wrapper {
+  height: 100%;
+  width: 500px;
+  position: relative;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fields label {
+  background-color: #fefdf8;
+  width: fit-content;
+  padding: 0 5px;
+}
+
+.first-name label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+}
+.last-name label {
+  position: absolute;
+  top: 53px;
+  left: 12px;
+}
+.email label {
+  position: absolute;
+  top: 117px;
+  left: 12px;
+}
+.message label {
+  position: absolute;
+  top: 178px;
+  left: 12px;
+}
+
+.fields input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #c4b8a9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #c4b8a9;
+  font-size: 1rem;
+  font-weight: 500;
+  resize: vertical;
+  overflow: auto;
+  line-height: 1.5;
+}
+
+.send-msg input {
+  background: #151515;
+  color: white;
+  padding: 12px 42px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .contact-form-sec {
+    padding: 30px;
+  }
+  .contact-form-wrapper {
+    height: 100%;
+    width: 300px;
+  }
+}
