@@ -1,15 +1,48 @@
-<html>
+<html lang="{{ request.locale.iso_code }}">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>
-      {{ page_title -}}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {{ shop.name }}
+      {% if page_title %} | {{ page_title }}{% endif %}
+      {%- if current_tags %} – Tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} – Page {{ current_page }}{% endif %}
     </title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
+
+    <meta name="robots" content="index, follow">
+    {% if template.name == 'cart' or template.name contains 'customers' %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="icon" href="{{ 'shopscript-logo.png' | asset_url }}" type="image/x-icon">
+
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page_description | escape }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:site_name" content="{{ shop.name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ settings.social_share_image | image_url: '1200x630' }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title | escape }}">
+    <meta name="twitter:description" content="{{ page_description | escape }}">
+    <meta name="twitter:image" content="{{ settings.social_share_image | image_url: '1200x630' }}">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ shop.name }}",
+        "url": "{{ shop.url }}",
+        "logo": "{{ settings.logo | image_url: '200x200' }}"
+      }
+    </script>
 
     {{ content_for_header }}
     {{ 'main.css' | asset_url | stylesheet_tag }}
