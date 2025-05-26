@@ -28,4 +28,10 @@ ShopScript is your go-to destination for quality fashion that fits your style an
 
 ## 🧰 Tech Stack
 
-
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Figma](https://img.shields.io/badge/-figma-E10098?style=for-the-badge&logo=figma&logoColor=white)
+![Shopify](https://img.shields.io/badge/shopify-black?style=for-the-badge&logo=shopify)
+![Liquid](https://img.shields.io/badge/liquid-blue?style=for-the-badge&logo=liquid)
+![Shopify CLI](https://img.shields.io/badge/shopifycli-black?style=for-the-badge&logo=shopifycli)
